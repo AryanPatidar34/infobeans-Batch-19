@@ -12,7 +12,8 @@ Show Time = evening
 Day = weekend
 
 Output:
-Ticket Price = 300"""
+Ticket Price = 300
+"""
 
 age = int(input("Enter age"))
 time = input("show time(morning/evening)").lower()
