@@ -1,28 +1,37 @@
-"""
-5. Cinema Ticket Booking System
+'''
+5. Palindrome Check
+A number plate is considered special if it reads the same forward and backward. Such numbers are called palindromes.
+Write a program to *check whether a given number is a palindrome using loops*.
 
+Input: 121
+Output: Palindrome
+'''
 
-A cinema hall charges ticket prices based on the age of the customer:
+#using for loop
+'''
+n = int(input("Enter the number"))
+temp=n
+rev =0
+for i in range(len(str(n))):
+    rev=rev*10+n%10
+    n = n//10
 
-* Children (below 12 years) → ₹100
-* Adults (12 to 60 years) → ₹200
-* Senior citizens (above 60 years) → ₹150
+if rev==temp:
+    print("palindrome")
+else:
+    print("not palindrome")
+'''
+   
+#using while loop
+n = int(input("Enter the number"))
+rev=0
+temp=n
+while n>0:
+     rev = rev*10+n%10
+     n = n//10
 
-Write a Python program to determine the ticket price.
-
-Input:
-Enter age: 10
-
-Output:
-Ticket Price: ₹100
-"""
-
-age = int(input("Enter your age"))
-if age<12:
-    print("Ticket Price : 100")
-
-elif age>=12 and age<=60:
-    print("Ticket Price : 200")
+if temp==rev:
+   print("palindome")
 
 else:
-    print("Ticket Price : 150")
+   print('not palindrome')

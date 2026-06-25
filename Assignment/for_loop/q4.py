@@ -1,30 +1,31 @@
-"""
-4. E-Commerce Discount Engine
+'''
+4. Reverse a Number
+A security system stores OTP codes in reverse format for encryption to increase data safety. Reversing a number means extracting digits and rebuilding it in reverse order.
+Write a program to *reverse a given integer using loops*.
+
+Input: 1234
+Output: 4321
+
+'''
+
+#using for loop
+'''
+n = int(input("Enter the number"))
+rev = 0
+for i in range(len(str(n))):
+    rev=rev*10+n%10
+    n= n//10
+     
+print("reverse order is:",rev)'''
 
 
-An online shopping platform provides discounts to customers based on their total purchase amount:
 
-* Above ₹5000 → 20% discount
-* ₹2000 to ₹5000 → 10% discount
-* Below ₹2000 → 5% discount
+#using while loop
+n = int(input("Enter the number"))
+rev =0
 
-Write a Python program to calculate the final amount after discount.
-
-Input:
-Enter purchase amount: 4500
-
-Output:
-Final Amount: ₹4050
-"""
-
-amount = int(input("Enter amount : "))
-if amount>5000:
-    amount = amount-(amount*0.20)
-    print("Final Amount:",amount)
-
-elif amount>=2000 and amount<=5000:
-     amount = amount-(amount*0.10)  
-     print("Final Amount:",amount)
-else:
-     amount = amount-(0.05)
-     print("Final Amount:", amount)
+while n>0:
+      rev = rev*10+n%10
+      n = n//10
+      
+print(rev)

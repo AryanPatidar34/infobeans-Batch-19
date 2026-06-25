@@ -1,36 +1,38 @@
-"""12. Restaurant Bill with GST System
+'''
+*12. Multiplication of Digits*
+A puzzle game calculates a score by multiplying all digits of a number together. After calculating the score, the game also checks whether the final score is even or odd to assign a bonus.
+Write a program to *find the product of all digits of a number using loops and then check whether the result is even or odd*.
 
-A restaurant applies GST based on the total bill amount:
+Input: 1234
+Output: 24
+Even'''
 
-* Up to ₹1000 → 5% GST
-* ₹1001 to ₹5000 → 12% GST
-* Above ₹5000 → 18% GST
-  Additionally, if the bill exceeds ₹3000, a service charge of ₹200 is added.
-
-Write a Python program to calculate the final bill.
-
-Input:
-Enter bill amount: 4000
-
-Output:
-Final Bill Amount: ₹4680"""
-
-
-
-bill = int(input("Enter bill"))
-if bill<1000:
-    bill = bill+(bill*0.05)
-    print("Final Bill Amount :",bill)
-
-elif bill>=1000 and bill<=5000:
-     bill =  bill+(bill*0.12)
-     if bill>3000:
-         bill = bill+200
-         print("Final Bill Amount :",bill)
-     else:
-         print("Final Bill Amount :",bill)
-
+#using for loop 
+'''
+n= int(input("Enter the number"))
+mul =1
+for i in range(len(str(n))):
+     rem = n%10
+     mul = mul*rem
+     n = n//10
+ 
+if mul%2==0:
+    print("Even")
 else:
-     bill = bill*0.18
-     print("Final Bill Amount :",bill)
-    
+    print("odd")
+'''
+
+#using while loop
+n= int(input("Enter the number"))
+mul =1
+while n>0:
+      rem = n%10
+      mul=mul*rem
+      n=n//10
+
+if mul%2==0:
+    print("Even")
+else:
+    print("odd")
+      
+

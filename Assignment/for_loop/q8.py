@@ -1,27 +1,35 @@
-"""8. Weather Monitoring System
+'''
+*8. Count Odd Digits*
+A banking system flags IDs with too many odd digits for further verification.
+Write a program to *count the number of odd digits in a given number using loops*.
 
-A weather monitoring system classifies the weather condition based on temperature:
+Input: 123456
+Output: Odd digits count = 3
+'''
 
-* Below 0°C → Freezing
-* 0°C to 20°C → Cold
-* 21°C to 35°C → Warm
-* Above 35°C → Hot
+#using for loop
+'''
+n = int(input("Enter the number"))
+rev = 0
+count=0
+for i in range(len(str(n))):
+    rev = n%10
+    if rev%2!=0:
+        count+=1
+    n=n//10
+print("odd digits count :",count)'''
 
-Write a Python program to classify the weather.
-
-Input:
-Enter temperature: 38
-
-Output:
-Weather Condition: Hot"""
 
 
-temp = int(input("Enter tempreture"))
-if temp<0:
-    print("Freezing")
-elif temp>0 and temp<=20:
-    print("cold")
-elif temp>=21 and temp<=35:
-    print("Warm")
-else:
-    print("hot")
+#using while loop
+
+n = int(input("Enter the number"))
+rev = 0
+count=0
+while n>0:
+      rev = n%10
+      if rev%2!=0:
+          count+=1
+      n=n//10
+print('odd digits count :',count)
+    

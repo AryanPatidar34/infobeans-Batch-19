@@ -1,38 +1,41 @@
-"""13. Employee Performance Appraisal System
+'''*13. Number Range Display System (if-elif with loops)*
+A number analysis tool processes two input values and displays numbers between them based on their relationship.
 
+* If the first number is less than the second, display numbers in ascending order
+* If the first number is greater than the second, display numbers in descending order
+* If both numbers are equal, display "Both numbers are same"
 
-A company evaluates employees based on performance rating (1–5):
+Write a program using *if-elif-else and loops* to implement this logic.
 
-* 5 → 25% salary hike
-* 4 → 20% salary hike
-* 3 → 10% salary hike
-* 2 → 5% salary hike
-* 1 → No hike
-  If salary is below ₹20000 and rating is 4 or above, an additional ₹2000 bonus is given.
+Input: 5, 10
+Output: 5 6 7 8 9 10
 
-Write a Python program to calculate revised salary.
+Input: 10, 5
+Output: 10 9 8 7 6 5'''
 
-Input:
-Enter salary: 18000
-Enter rating: 4
-
-Output:
-Revised Salary: ₹23600"""
-
-salary = int(input("Enter salary"))
-rating = int(input("Enter rating"))
-
-if rating==5:
-    salary =salary+(salary*0.25)
-    print("Revised salary :",salary)
-elif rating==4:
-    salary = salary+(salary*0.20)
-    print("Revised salary :",salary)
-elif rating==3:
-    salary = salary+(salary*0.10)
-    print("Revised salary :",salary)
-elif rating==2:
-    salary = salary+(salary*0.05)
-    print("Revised salary :",salary)
+#using for loop
+'''
+a,b=map(int,input("Enter the numbers :").split())
+if a<b:
+    for i in range(a,b+1):
+        print(i,end=" ")
+elif a>b:
+    for i in range(a,b-1,-1):
+        print(i,end=" ")
 else:
-    print("no hike")
+    print("both are same")'''
+
+#using while loop
+a,b = map(int,input("Enter the numbers:").split())
+if a<b:
+
+   while a<=b:
+             print(a,end=" ")
+             a+=1
+
+elif a>b:
+    while  a>=b:
+           print(a,end=" ")
+           a-=1
+else:
+    print("both are same")

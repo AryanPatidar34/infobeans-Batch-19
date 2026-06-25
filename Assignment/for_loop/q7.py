@@ -1,27 +1,33 @@
-"""
-7. Banking Withdrawal Limit System
+'''
+*7. Count Even Digits*
+A data analyst is analyzing numeric IDs and needs to determine how many digits in the ID are even.
+Write a program to *count the number of even digits in a given number using loops*.
+
+Input: 123456
+Output: Even digits count = 3
+'''
+#using for loop
+'''
+n= int(input("Enter the number"))
+count =0
+rev =0
+for i in range(len(str(n))):
+    rev = n%10
+    if rev%2==0:
+        count+=1
+    n= n//10
+
+print("Even digit count :"count)'''
 
 
-A bank wants to set withdrawal limits based on the available account balance:
 
-* Balance less than ₹1000 → Withdrawal not allowed
-* ₹1000 to ₹5000 → Maximum withdrawal ₹1000
-* Above ₹5000 → Maximum withdrawal ₹5000
-
-Write a Python program to display the withdrawal limit.
-
-Input:
-Enter account balance: 3500
-
-Output:
-Maximum Withdrawal Limit: ₹1000
-
-"""
-
-balance = int(input("Enter balance : "))
-if balance<1000:
-    print("Withdrawal not allowed")
-elif balance>=1000 and balance<=5000:
-    print("Maximum withdrawal limit 1000")
-else:
-    print("Maximum withdrawal 5000")
+#using while loop
+n= int(input("Enter the number"))
+count=0
+rev=0
+while n>0:
+     rev=n%10
+     if rev%2==0:
+         count+=1
+     n=n//10
+print("Even digit count :",count)

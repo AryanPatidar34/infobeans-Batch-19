@@ -1,26 +1,19 @@
-"""
-10. Mobile Data Plan Advisor
+"""*10. Even Numbers Between Two Numbers*
+A teacher wants to assign only even roll numbers for a special activity. The system should display all even numbers between two given numbers.
+Write a program to *display all even numbers between two numbers using loops*.
 
+Input: 10, 20
+Output: 10 12 14 16 18 20"""
 
-A telecom company suggests the most suitable data plan based on a user’s daily data usage:
+# using for loop
+'''
+a,b=map(int,input("Enter the number").split())
+for i in range(a,b+1,2):
+    print(i,end=" ")'''
 
-* More than 3GB/day → Premium Plan
-* 1GB to 3GB/day → Standard Plan
-* Less than 1GB/day → Basic Plan
-
-Write a Python program to recommend a plan.
-
-Input:
-Enter daily data usage: 0.8
-
-Output:
-Recommended Plan: Basic Plan
-
-"""
-usage = float(input("Enter daily data usage"))
-if usage>3:
-     print("premium plan")
-elif usage>=1 and usage<=3:
-     print("Standard plan")
-else:
-     print("Basic plan")
+#using while loop
+a,b=map(int,input("Enter the numbers").split())
+i=a
+while i<=b:
+          print(i,end=" ")
+          i+=2

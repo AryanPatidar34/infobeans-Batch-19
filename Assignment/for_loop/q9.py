@@ -1,25 +1,49 @@
-"""
-9. Student Attendance Eligibility System
+'''
+*9. Check All Digits Are Even*
+A machine only accepts numbers where every digit is even. If any digit is odd, the number is rejected.
+Write a program to *check whether all digits of a number are even using loops*.
 
-A college determines whether a student is eligible to sit for exams based on attendance percentage:
+Input: 2468
+Output: All Even
 
-* 75% and above → Eligible
-* 60% to 74% → Eligible with warning
-* Below 60% → Not eligible
+Input: 2456
+Output: Not All Even
+'''
+#using for loop 
+'''
+n=int(input("Enter the number"))
+count=0
+evendigit=0
+for i in range(len(str(n))):
+    rev =0
+    count+=1
+    rev = n%10
+    if rev%2==0:
+        evendigit+=1
+    n=n//10
 
-Write a Python program to check eligibility.
-
-Input:
-Enter attendance percentage: 58
-
-Output:
-Status: Not Eligible
-"""
-
-attendance = int(input("Enter your attendance"))
-if attendance>=75:
-     print("Eligible")
-elif attendance>=60 and attendance<=74:
-     print("Eligible with warning")
+if count==evendigit:
+    print("All even digit")
 else:
-     print("not eligible")
+    print("not all even")'''
+
+#using while loop
+n=int(input("Enter the number"))
+count=0
+evendigit=0
+
+while n>0:
+      rev=0
+      count+=1
+      rev=n%10
+      if rev%2==0:
+          evendigit+=1
+      n=n//10
+
+if count==evendigit:
+    print("All even digit")
+else:
+    print("not all even")
+
+    
+    

@@ -1,52 +1,43 @@
-"""14. Online Course Fee System
+'''14.Floor Movement System (Elevator)
+An elevator system takes the current floor and destination floor as input.
 
-An online platform offers courses with fixed fees:
+If current floor < destination → move upward and display floors
+If current floor > destination → move downward and display floors
+If both are same → display "Already on the same floor"
 
-* Programming → ₹5000
-* Design → ₹4000
-* Marketing → ₹3000
-  Discount is applied based on user type:
-* Student → 20% discount
-* Working Professional → 10% discount
-* Others → No discount
+Write a program using if-elif-else and loops to simulate elevator movement.
 
-Write a Python program to calculate final course fee.
+Input: 1, 5
+Output: 1 → 2 → 3 → 4 → 5
 
-Input:
-Enter course category: Programming
-Enter user type: Student
+Input: 7, 3
+Output: 7 → 6 → 5 → 4 → 3
 
-Output:
-Final Course Fee: ₹4000"""
-
-
-course =input("Enter course category :(Programmig/Design/Marketing)").lower()
-type = input("Enter user type:(Student/working_professional/other)").lower()
-
-if course=="programming":
-    if type=="student":
-        Fee=5000-(5000*0.20)
-        print("Final Course Fee :",Fee)
-    elif type=="working_professional":
-        Fee =5000-(5000*0.10)
-        print("Final Course Fee:",Fee)
-    else:
-        print("no discount")
-elif course=="design":
-      if type=="student":
-          Fee=4000-(4000*0.20)
-          print("Final Course Fee:",Fee)
-      elif type=="working_professional":
-           Fee=4000-(4000*0.10)
-           print("Final Course Fee:",Fee)
-      else:
-          print("no discount")
+Input: 4, 4
+Output: Already on the same floor'''
+'''
+#using for loop
+a,b=map(int,input("Enter the nyumbers: ").split())
+if a<b:
+    for i in range(a,b+1):
+        print(i,end=" ")
+elif a>b:
+    for i in range(a,b-1,-1):
+        print(i,end=" ")
 else:
-     if type=="student":
-         Fee=3000-(3000*20)
-         print("Final Course Fee:",Fee)
-     elif type=="working_professional":
-          Fee=3000-(3000*0.10)
-          print("Final Course Fee:",Fee)
-     else:
-         print("no discount")
+    print("Already on the same floor")'''
+
+
+#using while loop
+a,b = map(int,input("Enter the number :").split())
+if a<b:
+    while a<=b:
+          print(a,end=" ")
+          a=a+1
+elif a>b:
+    while a>=b:
+        print(a,end=" ")
+        a-=1
+else:
+    print("Already on the same floor")
+       

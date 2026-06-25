@@ -1,27 +1,35 @@
 """
-1. Electricity Department Billing System
+Note: Read all the values from user. Use loops wherever required.
+NOTE: complete all programs using both the loops
 
+---
 
-The electricity department of a city wants to automate the monthly bill generation process for its customers. The bill is calculated based on slab-wise unit consumption:
+1. Sum of First N Natural Numbers
+A teacher wants to reward students by giving points daily. On day 1, a student gets 1 point, day 2 → 2 points, and so on. This follows a natural number sequence.
+Write a program to calculate the *total points earned after n days* by summing all natural numbers up to n using loops.
 
-* First 100 units are charged at ₹5 per unit
-* Next 100 units (101–200) are charged at ₹7 per unit
-* Units above 200 are charged at ₹10 per unit
-
-Write a Python program to calculate the total electricity bill based on the number of units consumed.
-
-Input:
-Enter units consumed: 250
-
-Output:
-Total Electricity Bill: ₹1950
+Input: n = 10
+Output: Total Points = 55
 """
 
 
-units = int(input("Enter unit"))
-if units<=100:
-     print("bill",units*5)
-elif units>=100 and units<=200:
-     print("bill",(units-100)*7+(100*5))
-else:
-     print("bill",(units-200)*10+(100*7)+(100*5))
+# using for loop
+'''n= int(input("Enter the number"))
+points =0
+for i in range(1,n+1):
+     points= points+i
+
+print("Total points = ",points)'''
+
+
+# using while loop
+
+n= int(input("Enter the number"))
+points=0
+
+i=1
+while i<=n:
+      points=points+i
+      i+=1
+
+print("Total points=",points)
