@@ -8,9 +8,8 @@ Input:
 
 Output:
 First Digit = 5 '''
-
-n=int(input("Enter the number"))
 '''
+n=int(input("Enter the number"))
 rev =""
 while n>0:
      d = n%10
@@ -22,9 +21,17 @@ d1 = rev%10
 print("First digit :",d1)'''
 
 
+
+'''
+n=int(input("Enter the number"))
 l =len(str(n))
-str = str(n)
-for i in str:
-       print(i)
+for i in range(l-1):
+        n=n//10
+print(n)
+'''
 
-
+n=int(input("Enter the number"))
+s = str(n)
+for i in s:
+    
+    print(i)

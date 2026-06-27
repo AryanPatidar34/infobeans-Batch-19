@@ -21,6 +21,9 @@ for i in range(1,x+1):
 print(count)'''
 
 
+
+
+#using while loop
 while n<=x:
     if n%5==0:
         count=count+1
