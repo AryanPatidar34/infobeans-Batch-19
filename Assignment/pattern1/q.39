@@ -1,0 +1,22 @@
+'''
+123456
+54321
+1234
+321
+12
+1
+'''
+n=int(input("Enter the number"))
+i=1
+d=n
+while i<=n:
+    print()
+    j=n
+    s=1
+    while j>=i:
+        if i%2!=0:
+            print(s,end="")
+          
+        s+=1
+            
+    i+=1
