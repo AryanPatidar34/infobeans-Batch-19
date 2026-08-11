@@ -1,0 +1,31 @@
+'''
+4. Reverse a Number
+A security system stores OTP codes in reverse format for encryption to increase data safety. Reversing a number means extracting digits and rebuilding it in reverse order.
+Write a program to *reverse a given integer using loops*.
+
+Input: 1234
+Output: 4321
+
+'''
+
+#using for loop
+'''
+n = int(input("Enter the number"))
+rev = 0
+for i in range(len(str(n))):
+    rev=rev*10+n%10
+    n= n//10
+     
+print("reverse order is:",rev)'''
+
+
+
+#using while loop
+n = int(input("Enter the number"))
+rev =0
+
+while n>0:
+      rev = rev*10+n%10
+      n = n//10
+      
+print(rev)
