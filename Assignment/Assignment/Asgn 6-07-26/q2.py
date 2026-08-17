@@ -18,7 +18,7 @@ Input:
 Output:
 0 1 1 2 3 5 8
 '''
-'''
+
 
 n=int(input("Enter the number"))
 for i in range(0,2):
@@ -38,23 +38,9 @@ while i<=n-2:
         sl=l
         l=sum
     i=i+1
-
- '''
-
-n=int(input("Enter the number"))                   
-i=0
-while i<n:
-    if i==0 or i==1:
-        print(i,end=" ")
-        p1=0
-        p=1
-    else:
-        res=p+p1
-        print(res,end=" ")
-        p1=p
-        p=res
-    i+=1
-
+        
+                     
+    
         
         
             

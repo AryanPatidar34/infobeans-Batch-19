@@ -1,0 +1,66 @@
+'''
+8.
+MATRIX PATTERN DETECTION SYSTEM
+
+A satellite monitoring center stores signal strengths in matrix form. Engineers want to identify special patterns in the matrix.
+
+Menu
+1. Count Even Numbers Above Main Diagonal
+2. Count Odd Numbers Below Main Diagonal
+3. Display Boundary Elements
+4. Exit
+Requirements
+Choice 1 – Count Even Numbers Above Main Diagonal
+
+Count all even numbers where:
+
+column > row
+Choice 2 – Count Odd Numbers Below Main Diagonal
+
+Count all odd numbers where:
+
+row > column
+Choice 3 – Display Boundary Elements
+
+Display all elements present on:
+
+First Row
+Last Row
+First Column
+Last Column
+
+without repeating corner elements.
+
+Sample Input
+1 2 3
+4 5 6
+7 8 9
+Output
+Even Numbers Above Main Diagonal = 2
+(2, 6)
+
+Odd Numbers Below Main Diagonal = 1
+(7)
+
+Boundary Elements:
+1 2 3 6 9 8 7 4
+'''
+print("MATRIX PATTERN DETECTION SYSTEM")
+while True:
+    print("\n1. Count Even Numbers Above Main Diagonal")
+    print("2. Count Odd Numbers below the main diagonal")
+    print("3. display boundary elements ")
+    print("4. Exit")
+    choice = int(input("Enter your choice: "))
+    match choice:
+        case 1:
+            matrix= []
+            r=int(input("Enter no of rows : "))
+            c=int(input("Enter no of col : "))
+            for i in range(r):
+                row=[]
+                for j in range(c):
+                    row.append(int(input()))
+                matrix.append(row)
+            print(matrix)
+                

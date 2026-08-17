@@ -1,0 +1,95 @@
+'''
+=====================================================================
+QUESTION 2: STUDENT RESULT PROCESSING
+=====================================
+
+A training institute wants to manage student records using NamedTuple.
+
+Fields:
+roll_no, name, course, marks
+
+Requirements:
+
+1. Read N student records from the user and store them in a list of NamedTuples.
+
+---
+
+2. Display all student details.
+
+---
+
+3. Find and display the topper of the class.
+
+---
+
+4. Count and display the number of students scoring above 80 marks.
+
+---
+
+5. Calculate and display the average marks.
+
+---
+
+6. Accept a course name from the user and display all students enrolled in that course.
+
+---
+
+Test Case:
+
+Input:
+Enter number of students: 4
+
+1 Ravi Python 85
+2 Anjali Java 78
+3 Karan Python 92
+4 Pooja Testing 88
+
+Enter course: Python
+
+Expected Output:
+Topper:
+3 Karan Python 92
+
+Students Above 80:
+3
+
+Average Marks:
+85.75
+
+Students in Python Course:
+1 Ravi Python 85
+3 Karan Python 92
+'''
+
+
+from collections import namedtuple
+Students=namedtuple("basic",["rollno","name","course","marks"])
+n=int(input("Enter no. of students :"))
+arr=[]
+for i in range(n):
+    roll=int(input("Enter student rollno : "))
+    nam=input("Enter student name : ")
+    c=input("Enter course")
+    m=int(input("Enter student marks : "))
+    arr.append(Students(roll,nam,c,m))
+
+for i in arr:
+    print(i.rollno,i.name,i.course,i.marks,)
+
+cou=input("Enter course you want :")
+max=arr[0]
+c=0
+sum=0
+for i in arr:
+    sum+=i.marks
+    if i.marks>max.marks:
+        max=i
+    if i.marks>80:
+        c+=1 
+print("Topper :",max.rollno,max.name,max.course,max.marks)
+print("Students above 80 :", c)
+print("Average marks :",sum/n)
+for i in arr:
+    if i.course==cou:
+        print("Students in Python Course :")
+        print(i.rollno,i.name,i.course,i.marks)
